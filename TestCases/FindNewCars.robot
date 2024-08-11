@@ -14,5 +14,5 @@ Find New Cars
     Visit New Cars Page
     Visit Hyundai
     Verify Cars Heading    Hyundai Cars
-    Sleep    3s
+    Sleep    5s
     
