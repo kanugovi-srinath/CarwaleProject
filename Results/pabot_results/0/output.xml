@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-08-11T19:42:54.888468" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="/Users/srinathkanugovi/Downloads/Automation/RobotFramework/CarwaleProject/TestCases">
+<suite id="s1-s1" name="FindNewCars" source="/Users/srinathkanugovi/Downloads/Automation/RobotFramework/CarwaleProject/TestCases/FindNewCars.robot">
+<test id="s1-s1-t1" name="Find New Cars" line="12">
+<kw name="launch browser" owner="commons">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:54.991689" level="INFO">Opening browser 'chrome' to base url 'https://www.carwale.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-11T19:42:54.991561" elapsed="2.593510"/>
+</kw>
+<kw name="Log Title" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:57.589225" level="INFO">New Cars, Used Cars, Buy a Car, Sell Your Car - CarWale</msg>
+<doc>Logs and returns the title of the current page.</doc>
+<status status="PASS" start="2024-08-11T19:42:57.585749" elapsed="0.003542"/>
+</kw>
+<arg>${testsuiteurl}</arg>
+<arg>chrome</arg>
+<status status="PASS" start="2024-08-11T19:42:54.991127" elapsed="2.598256"/>
+</kw>
+<kw name="Visit New Cars Page" owner="homePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${newcar_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T19:42:57.589793" elapsed="0.015410"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:57.605478" level="INFO">Simulating Mouse Over on element '//*[@id="root"]/div[1]/header/div/nav/ul/li[1]/div'.</msg>
+<arg>${newcar_xpath}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-08-11T19:42:57.605320" elapsed="0.261006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:57.866718" level="INFO">Clicking element '//*[@id="root"]/div[1]/header/div/nav/ul/li[1]/div[2]/div[1]/ul/a[1]'.</msg>
+<arg>${findnewcar_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T19:42:57.866494" elapsed="0.066041"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${newcar_header_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T19:42:57.932669" elapsed="0.238734"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:58.171745" level="INFO">Verifying element '//*[@id="root"]/div[2]/div/section[1]/header/h2' contains exact text 'All Brands'.</msg>
+<arg>${newcar_header_xpath}</arg>
+<arg>All Brands</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.171539" elapsed="0.013282"/>
+</kw>
+<status status="PASS" start="2024-08-11T19:42:57.589563" elapsed="0.595347"/>
+</kw>
+<kw name="Visit Hyundai" owner="newCarsPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${hyundai_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.185234" elapsed="0.008377"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:58.193869" level="INFO">Clicking element '//img[@title='Hyundai cars']'.</msg>
+<arg>${hyundai_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.193714" elapsed="0.039192"/>
+</kw>
+<status status="PASS" start="2024-08-11T19:42:58.185034" elapsed="0.047951"/>
+</kw>
+<kw name="Verify Cars heading" owner="carBase">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${carheading_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.233270" elapsed="0.222816"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-11T19:42:58.456477" level="INFO">Verifying element '//*[@id="root"]/div[2]/div/div/div[2]/div/div/h1' contains exact text 'Hyundai Cars'.</msg>
+<arg>${carheading_xpath}</arg>
+<arg>${carheading}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.456227" elapsed="0.007504"/>
+</kw>
+<arg>Hyundai Cars</arg>
+<status status="PASS" start="2024-08-11T19:42:58.233094" elapsed="0.230701"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-11T19:43:01.464830" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-11T19:42:58.463879" elapsed="3.001131"/>
+</kw>
+<kw name=" Finish Test Case" owner="commons" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-11T19:43:01.466352" level="INFO">Ending the Test Case</msg>
+<arg>Ending the Test Case</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-11T19:43:01.466176" elapsed="0.000252"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-11T19:43:01.466568" elapsed="0.088348"/>
+</kw>
+<status status="PASS" start="2024-08-11T19:43:01.465632" elapsed="0.089370"/>
+</kw>
+<status status="PASS" start="2024-08-11T19:42:54.990831" elapsed="6.564206"/>
+</test>
+<status status="PASS" start="2024-08-11T19:42:54.905481" elapsed="6.649869"/>
+</suite>
+<status status="PASS" start="2024-08-11T19:42:54.899341" elapsed="6.656269"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="FindNewCars">TestCases.FindNewCars</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
